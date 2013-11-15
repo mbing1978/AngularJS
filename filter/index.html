@@ -1,19 +1,15 @@
 <!doctype html>
-<html ng-app="FilterInControllerModule">
+<html ng-app="MyReverseModule">
 <head>
   <script src="http://code.angularjs.org/1.2.0/angular.min.js"></script>
   <script src="script.js"></script>
 </head>
 <body>
-<div ng-controller="FilterController as ctrl">
-  <div>
-    All entries:
-    <span ng-repeat="entry in ctrl.array">{{entry.name}} </span>
-  </div>
-  <div>
-    Entries that contain an "a":
-    <span ng-repeat="entry in ctrl.filteredArray">{{entry.name}} </span>
-  </div>
+<div ng-controller="Ctrl">
+  <input ng-model="greeting" type="greeting"><br>
+  No filter: {{greeting}}<br>
+  Reverse: {{greeting|reverse}}<br>
+  Reverse + uppercase: {{greeting|reverse:true}}<br>
 </div>
 </body>
 </html>
