@@ -1,13 +1,14 @@
 <!doctype html>
-<html ng-app="spicyApp1">
+<html ng-app="spicyApp2">
 <head>
   <script src="http://code.angularjs.org/1.2.0/angular.min.js"></script>
   <script src="script.js"></script>
 </head>
 <body>
-<div ng-app="spicyApp1" ng-controller="SpicyCtrl">
-  <button ng-click="chiliSpicy()">Chili</button>
-  <button ng-click="jalapenoSpicy()">Jalapeño</button>
+<div ng-app="spicyApp2" ng-controller="SpicyCtrl">
+  <input ng-model="customSpice">
+  <button ng-click="spicy('chili')">Chili</button>
+  <button ng-click="spicy(customSpice)">Custom spice</button>
   <p>The food is {{spice}} spicy!</p>
 </div>
 </body>
