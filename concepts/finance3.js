@@ -4,7 +4,7 @@ angular.module('finance3', [])
         'http://query.yahooapis.com/v1/public/yql?q=select * from '+
           'yahoo.finance.xchange where pair in ("PAIRS")&format=json&'+
           'env=store://datatables.org/alltableswithkeys&callback=JSON_CALLBACK',
-      currencies = ['USD', 'EUR', 'CNY'],
+      currencies = ['USD', 'EUR', 'CNY','HKD'],
       usdToForeignRates = {};
     refresh();
     return {
