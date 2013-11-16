@@ -4,6 +4,7 @@
   <script src="http://code.angularjs.org/1.2.0/angular.min.js"></script>
 </head>
 <body>
+<div>中文是不是乱码</div>
 <div ng-init="qty=1;cost=2">
   <b>Invoice:</b>
   <div>
@@ -13,7 +14,7 @@
     Costs: <input type="number" ng-model="cost" required >
   </div>
   <div>
-    <b>Total:</b> {{qty * cost | currency}}
+    <b>Total:</b> {{qty * cost | currency:'￥'}}
   </div>
 </div>
 </body>
