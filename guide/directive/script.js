@@ -1,4 +1,4 @@
-angular.module('docsSimpleDirective', [])
+angular.module('docsTemplateUrlDirective', [])
   .controller('Ctrl', function($scope) {
     $scope.customer = {
       name: 'Naomi',
@@ -7,6 +7,6 @@ angular.module('docsSimpleDirective', [])
   })
   .directive('myCustomer', function() {
     return {
-      template: 'Name: {{customer.name}} Address: {{customer.address}}'
+      templateUrl: 'my-customer.html'
     };
   });
